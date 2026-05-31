@@ -163,8 +163,8 @@ else:
     ax.legend(facecolor='#f0f2f6')
     st.pyplot(fig)
 
-           # ==============================================================================
-    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Hadith- & Bild-Version)
+        # ==============================================================================
+    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Wikipedia-Bild-Version)
     # ==============================================================================
     st.markdown("---")
     st.markdown("<h2 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>🌱 1. Investment: Sadaqah Jariyah Projekte</h2>", unsafe_allow_html=True)
@@ -185,28 +185,28 @@ else:
     st.markdown("<p style='text-align: center; font-family: sans-serif; color: #555555;'>Wählen Sie ein reales Projekt aus, um Ihre Erträge und Reinigungssummen direkt fließen zu lassen (Demonstrations-Modus):</p>", unsafe_allow_html=True)
     st.write("")
 
-    # 3 Spalten für die interaktive Auswahl inklusive Beispielbildern
+    # 3 Spalten für die interaktive Auswahl inklusive stabiler Wiki-Bilder
     proj1, proj2, proj3 = st.columns(3)
 
     with proj1:
-        # Bild für Brunnenbau
-        st.image("https://unsplash.com", use_container_width=True)
+        # Stabiles Bild: Brunnenbau
+        st.image("https://wikimedia.org", use_container_width=True)
         st.markdown("### 💧 1. Brunnen bauen")
         st.caption("Sichern Sie Dörfern dauerhaften Zugang zu sauberem Trinkwasser.")
         if st.button("Projekt auswählen ➔", key="btn_brunnen"):
             st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="💧")
             
     with proj2:
-        # Bild für Waisenhäuser
-        st.image("https://unsplash.com", use_container_width=True)
+        # Stabiles Bild: Waisenhäuser / Kinderhilfe
+        st.image("https://wikimedia.org", use_container_width=True)
         st.markdown("### 🧒 2. Waisenhäuser")
         st.caption("Übernehmen Sie die Verantwortung für Kleidung, Nahrung und Bildung eines Kindes.")
         if st.button("Projekt auswählen ➔", key="btn_waisen"):
             st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🧒")
             
     with proj3:
-        # Bild für Moscheebau
-        st.image("https://unsplash.com", use_container_width=True)
+        # Stabiles Bild: Moschee errichten
+        st.image("https://wikimedia.org", use_container_width=True)
         st.markdown("### 🕌 3. Moschee errichten")
         st.caption("Investieren Sie in den Bau von Gebetsstätten und Schulen weltweit.")
         if st.button("Projekt auswählen ➔", key="btn_moschee"):

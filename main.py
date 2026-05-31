@@ -164,11 +164,22 @@ else:
     st.pyplot(fig)
 
         # ==============================================================================
-    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Bereinigte Demo-Version)
+    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Elegantes Design)
     # ==============================================================================
     st.markdown("---")
-    st.markdown("<h2 style='text-align: center; color: #D4AF37;'>🌱 1. Investment: Sadaqah Jariyah Projekte</h2>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center;'>Wählen Sie ein reales Projekt aus, um Ihre Erträge und Reinigungssummen direkt fließen zu lassen (Demonstrations-Modus):</p>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>🌱 1. Investment: Sadaqah Jariyah Projekte</h2>", unsafe_allow_html=True)
+    
+    # Elegantes, stilvolles Banner für den Jenseits-Gedanken
+    html_sadaqah_text = """
+    <div style='background-color: #f4f6f9; padding: 15px; border-radius: 8px; border-left: 5px solid #D4AF37; text-align: center; margin-bottom: 25px;'>
+        <p style='font-family: "Georgia", serif; font-style: italic; font-size: 1.2em; color: #1E5631; margin: 0;'>
+            „Der weise Anleger investiert in sein Diesseits und baut gleichzeitig bleibenden Segen (Barakah) für sein Jenseits auf.“
+        </p>
+    </div>
+    """
+    st.markdown(html_sadaqah_text, unsafe_allow_html=True)
+    
+    st.markdown("<p style='text-align: center; font-family: sans-serif; color: #555555;'>Wählen Sie ein reales Projekt aus, um Ihre Erträge und Reinigungssummen direkt fließen zu lassen (Demonstrations-Modus):</p>", unsafe_allow_html=True)
     st.write("")
 
     # 3 Spalten für die interaktive Auswahl

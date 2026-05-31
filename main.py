@@ -104,7 +104,7 @@ else:
             else:
                 wert_in_aktien = anteile_bot * kurs_aktien
                 kapital_bot = wert_in_aktien - ORDER_GEBUEHR
-                anteile_bot = kapital_bot / sidebar = kurs_gold
+                anteile_bot = kapital_bot / sidebar=kurs_gold
                 anteile_bot = kapital_bot / kurs_gold
                 position = "Gold"
             letztes_signal = aktuelles_signal

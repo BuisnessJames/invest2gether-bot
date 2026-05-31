@@ -73,7 +73,8 @@ else:
     verlauf_bh = []
     eingezahltes_kapital = START_KAPITAL
     
-    letzter_monat = df.index.month
+    # KORREKTUR: Einzelnen Startmonat auslesen, um ValueError zu verhindern
+    letzter_monat = df.index[0].month
 
     for i in range(len(df)):
         aktuelles_datum = df.index[i]
@@ -104,8 +105,7 @@ else:
             else:
                 wert_in_aktien = anteile_bot * kurs_aktien
                 kapital_bot = wert_in_aktien - ORDER_GEBUEHR
-                anteile_bot = kapital_bot / kurs_gold
-                anteile_bot = kapital_bot / kurs_gold
+                anteile_bot = kapital_bot / kurs_gold  # KORREKTUR: Doppelte Zeile & Syntax entfernt
                 position = "Gold"
             letztes_signal = aktuelles_signal
             
@@ -172,6 +172,7 @@ else:
     
     csv_datei = "warteliste.csv"
     
+    # KORREKTUR: Formular sauber geschlossen
     with st.form(key='waitlist_form', clear_on_submit=True):
         col_name, col_email = st.columns(2)
         with col_name:
@@ -200,9 +201,7 @@ else:
                 st.warning("Bitte füllen Sie sowohl den Namen als auch die E-Mail-Adresse aus.")
 
     # ==============================================================================
-    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Gereinigte Einzeiler-Variante)
+    # SADAQAH JARIYAH & JENSEITS-INVESTMENT
     # ==============================================================================
     st.markdown("---")
     st.markdown("<h2 style='text-align: center; color: #D4AF37;'>🌱 Das ultimative Investment: Sadaqah Jariyah</h2>", unsafe_allow_html=True)
-
-    # Das grüne Banner komplett als einzeiliger String formatiert, um Fehler zu vermeiden

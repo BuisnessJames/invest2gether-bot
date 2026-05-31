@@ -62,8 +62,8 @@ else:
     kapital_bot = START_KAPITAL
     kapital_bh = START_KAPITAL
     
-    anteile_bot = kapital_bot / df['Gold'].iloc
-    anteile_bh = kapital_bh / df['Aktien'].iloc
+    anteile_bot = kapital_bot / df['Gold'].iloc[0]
+    anteile_bh = kapital_bh / df['Aktien'].iloc[0]
     
     gebuehren_gesamt = 0.0
     position = "Gold"  

@@ -164,16 +164,19 @@ else:
     st.pyplot(fig)
 
         # ==============================================================================
-    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Elegantes Design)
+    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Hadith-Version)
     # ==============================================================================
     st.markdown("---")
     st.markdown("<h2 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>🌱 1. Investment: Sadaqah Jariyah Projekte</h2>", unsafe_allow_html=True)
     
-    # Elegantes, stilvolles Banner für den Jenseits-Gedanken
+    # Elegantes Banner mit dem von dir gewählten Hadith
     html_sadaqah_text = """
     <div style='background-color: #f4f6f9; padding: 15px; border-radius: 8px; border-left: 5px solid #D4AF37; text-align: center; margin-bottom: 25px;'>
-        <p style='font-family: "Georgia", serif; font-style: italic; font-size: 1.2em; color: #1E5631; margin: 0;'>
-            „Der weise Anleger investiert in sein Diesseits und baut gleichzeitig bleibenden Segen (Barakah) für sein Jenseits auf.“
+        <p style='font-family: "Georgia", serif; font-style: italic; font-size: 1.25em; color: #1E5631; margin: 0;'>
+            „Besitz wird durch Sadaqah niemals gemindert (sondern vermehrt).“
+        </p>
+        <p style='font-family: sans-serif; font-size: 0.85em; color: #777777; margin-top: 5px; margin-bottom: 0;'>
+            — Prophet Mohammed ﷺ (Sahih Muslim)
         </p>
     </div>
     """

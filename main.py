@@ -62,8 +62,8 @@ else:
     kapital_bot = START_KAPITAL
     kapital_bh = START_KAPITAL
     
-    anteile_bot = kapital_bot / df['Gold'].iloc[0]
-    anteile_bh = kapital_bh / df['Aktien'].iloc[0]
+    anteile_bot = kapital_bot / df['Gold'].iloc
+    anteile_bh = kapital_bh / df['Aktien'].iloc
     
     gebuehren_gesamt = 0.0
     position = "Gold"  
@@ -73,7 +73,7 @@ else:
     verlauf_bh = []
     eingezahltes_kapital = START_KAPITAL
     
-    letzter_monat = df.index.month[0]
+    letzter_monat = df.index.month
 
     for i in range(len(df)):
         aktuelles_datum = df.index[i]
@@ -104,6 +104,7 @@ else:
             else:
                 wert_in_aktien = anteile_bot * kurs_aktien
                 kapital_bot = wert_in_aktien - ORDER_GEBUEHR
+                anteile_bot = kapital_bot / sidebar = kurs_gold
                 anteile_bot = kapital_bot / kurs_gold
                 position = "Gold"
             letztes_signal = aktuelles_signal
@@ -198,16 +199,10 @@ else:
             else:
                 st.warning("Bitte füllen Sie sowohl den Namen als auch die E-Mail-Adresse aus.")
 
-# ==============================================================================
-# SADAQAH JARIYAH & JENSEITS-INVESTMENT (Global Vision)
-# ==============================================================================
-st.markdown("---")
-st.markdown("<h2 style='text-align: center; color: #D4AF37;'>🌱 Das ultimative Investment: Sadaqah Jariyah</h2>", unsafe_allow_html=True)
+    # ==============================================================================
+    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Gereinigte Einzeiler-Variante)
+    # ==============================================================================
+    st.markdown("---")
+    st.markdown("<h2 style='text-align: center; color: #D4AF37;'>🌱 Das ultimative Investment: Sadaqah Jariyah</h2>", unsafe_allow_html=True)
 
-# Der weise Spruch / Hadith im Zentrum (Komplett linksbündig formatiert)
-html_hadith = """
-<div style='background-color: #1E5631; padding: 20px; border-radius: 10px; text-align: center; color: white;'>
-    <h4 style='margin: 0;'>„Der Kluge investiert nicht nur in sein Diesseits, sondern baut Vermögen für sein Jenseits auf.“</h4>
-    <p style='font-style: italic; margin-top: 10px; font-size: 0.9em;'>
-        Der Prophet Mohammed (s.a.w.) sagte: „Wenn der Mensch stirbt, schneiden sich seine Taten von ihm ab, 
-        außer in drei Fällen: Eine fortlaufende Spende (Sadaqah Jariyah), Wissen, von dem Nutzen gezogen wird, 
+    # Das grüne Banner komplett als einzeiliger String formatiert, um Fehler zu vermeiden

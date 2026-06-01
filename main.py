@@ -125,7 +125,7 @@ else:
     </div>
     """
     st.markdown(html_sadaqah_text, unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; color: #6c757d; font-size: 1.05em; margin-bottom: 25px;'>Bringen Sie Ihre Rendite in die reale Welt. Wählen Sie ein Projekt aus, um Ihre Reinigungssummen fließen zu lassen (Demonstrations-Modus):</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #6c757d; font-size: 1.05em; margin-bottom: 25px;'>Bringen Sie Ihre Rendite in die reale Welt. Investieren Sie in Ihr Jenseits mit fortlaufenden Projekten – für Segen auch nach dem Tod, Insha'Allah.:</p>", unsafe_allow_html=True)
 
     # 3 Spalten für die verschönerten Projekt-Karten
     proj1, proj2, proj3 = st.columns(3)

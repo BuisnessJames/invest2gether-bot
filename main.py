@@ -244,3 +244,39 @@ else:
         st.caption("Investieren Sie in den Bau von Gebetsstätten und Schulen weltweit.")
         if st.button("Projekt auswählen ➔", key="btn_moschee"):
             st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🕌")
+
+            # ==============================================================================
+    # INTERAKTIVE WARTELISTE
+    # ==============================================================================
+    st.markdown("---")
+    st.subheader("🚀 Werden Sie Teil der Beta-Phase von invest2gether")
+    st.markdown("Haben wir Ihr Interesse geweckt? Tragen Sie sich unverbindlich auf unsere Warteliste ein, um den offiziellen Start nicht zu verpassen.")
+    
+    csv_datei = "warteliste.csv"
+    
+    with st.form(key='waitlist_form', clear_on_submit=True):
+        col_name, col_email = st.columns(2)
+        with col_name:
+            kunden_name = st.text_input("Ihr Name")
+        with col_email:
+            kunden_email = st.text_input("Ihre E-Mail-Adresse")
+            
+        submit_button = st.form_submit_button(label='Jetzt exklusiven Beta-Zugang sichern ➔')
+        
+        if submit_button:
+            if kunden_name and kunden_email:
+                neuer_eintrag = pd.DataFrame([{
+                    "Datum": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "Name": kunden_name,
+                    "Email": kunden_email
+                }])
+                
+                if not os.path.isfile(csv_datei):
+                    neuer_eintrag.to_csv(csv_datei, index=False)
+                else:
+                    neuer_eintrag.to_csv(csv_datei, mode='a', header=False, index=False)
+                    
+                st.balloons()
+                st.success(f"Salam {kunden_name}! Vielen Dank für Ihr Vertrauen. Sie wurden auf der Warteliste eingetragen.")
+            else:
+                st.warning("Bitte füllen Sie sowohl den Namen als auch die E-Mail-Adresse aus.")

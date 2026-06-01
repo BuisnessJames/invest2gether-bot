@@ -127,35 +127,26 @@ else:
     st.markdown(html_sadaqah_text, unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: #6c757d; font-size: 1.05em; margin-bottom: 25px;'>Bringen Sie Ihre Rendite in die reale Welt. Investieren Sie in Ihr Jenseits mit fortlaufenden Projekten – für Segen auch nach dem Tod, Insha'Allah:</p>", unsafe_allow_html=True)
 
-        # 3 Spalten für die verschönerten Projekt-Karten
+       # 3 Spalten für die verschönerten Projekt-Karten (Reines Streamlit-Design)
     proj1, proj2, proj3 = st.columns(3)
     
     with proj1:
-        st.markdown("<div style='border: 1px solid #e9ecef; padding: 15px; border-radius: 8px; background-color: white;'>", unsafe_allow_html=True)
-        # KREISELSICHERER UNSPLASH LINK FÜR WASSER
         st.image("https://unsplash.com", use_container_width=True)
-        st.markdown("<h3 style='text-align: center; color: #1E5631; font-family: \"Georgia\", serif;'>💧 Brunnen bauen</h3>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center; font-size: 0.9em; color: #6c757d; min-height: 50px;'>Sichern Sie Dörfern und Familien dauerhaften Zugang zu sauberem Trinkwasser.</p>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>💧 Brunnen bauen</h3>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center; font-size: 0.95em; color: #888888; min-height: 50px;'>Sichern Sie Dörfern und Familien dauerhaften Zugang zu sauberem Trinkwasser.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b1", use_container_width=True): 
             st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="💧")
-        st.markdown("</div>", unsafe_allow_html=True)
             
     with proj2:
-        st.markdown("<div style='border: 1px solid #e9ecef; padding: 15px; border-radius: 8px; background-color: white;'>", unsafe_allow_html=True)
-        # KREISELSICHERER UNSPLASH LINK FÜR KINDER / HILFE
         st.image("https://unsplash.com", use_container_width=True)
-        st.markdown("<h3 style='text-align: center; color: #1E5631; font-family: \"Georgia\", serif;'>🏢 Waisenhäuser</h3>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center; font-size: 0.9em; color: #6c757d; min-height: 50px;'>Bau und Unterhalt von sicheren Unterkünften für Waisenkinder weltweit.</p>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>👶 Waisenhäuser</h3>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center; font-size: 0.95em; color: #888888; min-height: 50px;'>Bau und Unterhalt von sicheren Unterkünften für Waisenkinder weltweit.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b2", use_container_width=True): 
-            st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🏢")
-        st.markdown("</div>", unsafe_allow_html=True)
+            st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="👶")
 
     with proj3:
-        st.markdown("<div style='border: 1px solid #e9ecef; padding: 15px; border-radius: 8px; background-color: white;'>", unsafe_allow_html=True)
-        # KREISELSICHERER UNSPLASH LINK FÜR MOSCHEE
         st.image("https://unsplash.com", use_container_width=True)
-        st.markdown("<h3 style='text-align: center; color: #1E5631; font-family: \"Georgia\", serif;'>🕌 Moschee errichten</h3>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center; font-size: 0.9em; color: #6c757d; min-height: 50px;'>Unterstützung und Finanzierung von nachhaltigen Moscheebauten weltweit.</p>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>🕌 Moschee errichten</h3>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center; font-size: 0.95em; color: #888888; min-height: 50px;'>Unterstützung und Finanzierung von nachhaltigen Moscheebauten weltweit.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b3", use_container_width=True): 
             st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🕌")
-        st.markdown("</div>", unsafe_allow_html=True)

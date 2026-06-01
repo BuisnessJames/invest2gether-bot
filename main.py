@@ -199,9 +199,8 @@ else:
                 st.warning("Bitte füllen Sie sowohl den Namen als auch die E-Mail-Adresse aus.")
 
     # ==============================================================================
-    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Jetzt sauber eingerückt!)
+    # SADAQAH JARIYAH & JENSEITS-INVESTMENT
     # ==============================================================================
-    
     st.markdown("---")
     st.markdown("<h2 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>🌱 1. Investment: Sadaqah Jariyah Projekte</h2>", unsafe_allow_html=True)
     
@@ -215,3 +214,5 @@ else:
         </p>
     </div>
     """
+    st.markdown(html_sadaqah_text, unsafe_allow_html=True)
+    

@@ -51,6 +51,7 @@ else:
     # Super-stabile Simulation
     eingezahlt = START_KAPITAL + (len(df) / 21) * MONATLICHER_SPARPLAN
     
+    # HIER WAR DER FEHLER BEHOBEN: .iloc[0] hinzugefügt
     df['Bot_Depotwert'] = START_KAPITAL * (df['Gold'] / df['Gold'].iloc[0])
     df['Bot_Depotwert'] += (df['Bot_Depotwert'] * 0.0002).cumsum() 
     
@@ -106,47 +107,42 @@ else:
             st.success("Erfolgreich auf der Warteliste eingetragen!")
 
     # ==============================================================================
-    # SADAQAH PROJEKTE PART
+    # SADAQAH PROJEKTE PART (Krisensicheres Emoji-Grid-Design)
     # ==============================================================================
     st.markdown("---")
-    
-    # Premium Überschrift in Georgia-Serifenschrift
     st.markdown("<h2 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif; font-weight: 300; letter-spacing: 1px;'>🌱 Investition: Fortlaufende Spendenprojekte (Sadaqah Jariyah)</h2>", unsafe_allow_html=True)
     
-    # Edles Hadith-Banner
     html_sadaqah_text = """
-    <div style='background-color: #f8f9fa; padding: 18px; border-radius: 8px; border-left: 5px solid #D4AF37; text-align: center; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);'>
+    <div style='background-color: #f8f9fa; padding: 18px; border-radius: 8px; border-left: 5px solid #D4AF37; text-align: center; margin-bottom: 30px;'>
         <p style='font-family: "Georgia", serif; font-style: italic; font-size: 1.3em; color: #1E5631; margin: 0;'>
             „Besitz wird durch Sadaqah niemals gemindert (sondern vermehrt).“
         </p>
-        <p style='font-family: "Arial", sans-serif; font-size: 0.85em; color: #6c757d; margin-top: 6px; margin-bottom: 0; letter-spacing: 0.5px;'>
+        <p style='font-family: "Arial", sans-serif; font-size: 0.85em; color: #6c757d; margin-top: 6px; margin-bottom: 0;'>
             — PROPHET MOHAMMED ﷺ (SAHIH MUSLIM)
         </p>
     </div>
     """
     st.markdown(html_sadaqah_text, unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; color: #6c757d; font-size: 1.05em; margin-bottom: 25px;'>Bringen Sie Ihre Rendite in die reale Welt. Investieren Sie in Ihr Jenseits mit fortlaufenden Projekten – für Segen auch nach dem Tod, Insha'Allah:</p>", unsafe_allow_html=True)
 
-    # 3 Spalten für die verschönerten Projekt-Karten (Reines Streamlit-Design)
     proj1, proj2, proj3 = st.columns(3)
     
     with proj1:
-        st.image("https://unsplash.com", use_container_width=True)
+        st.markdown("<h1 style='text-align: center; font-size: 80px; margin: 0;'>🚰</h1>", unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>💧 Brunnen bauen</h3>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; font-size: 0.95em; color: #888888; min-height: 50px;'>Sichern Sie Dörfern und Familien dauerhaften Zugang zu sauberem Trinkwasser.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b1", use_container_width=True): 
-            st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="💧")
+            st.toast("🎯 Projekt ausgewählt!", icon="💧")
             
     with proj2:
-        st.image("https://unsplash.com", use_container_width=True)
+        st.markdown("<h1 style='text-align: center; font-size: 80px; margin: 0;'>👶</h1>", unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>👶 Waisenhäuser</h3>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; font-size: 0.95em; color: #888888; min-height: 50px;'>Bau und Unterhalt von sicheren Unterkünften für Waisenkinder weltweit.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b2", use_container_width=True): 
-            st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="👶")
+            st.toast("🎯 Projekt ausgewählt!", icon="🏢")
 
     with proj3:
-        st.image("https://unsplash.com", use_container_width=True)
+        st.markdown("<h1 style='text-align: center; font-size: 80px; margin: 0;'>🕌</h1>", unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>🕌 Moschee errichten</h3>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; font-size: 0.95em; color: #888888; min-height: 50px;'>Unterstützung und Finanzierung von nachhaltigen Moscheebauten weltweit.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b3", use_container_width=True): 
-            st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🕌")
+            st.toast("🎯 Projekt ausgewählt!", icon="🕌")

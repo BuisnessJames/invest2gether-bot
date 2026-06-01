@@ -164,7 +164,43 @@ else:
     st.pyplot(fig)
 
         # ==============================================================================
-    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Wikipedia-Bild-Version)
+    # INTERAKTIVE WARTELISTE
+    # ==============================================================================
+    st.markdown("---")
+    st.subheader("🚀 Werden Sie Teil der Beta-Phase von invest2gether")
+    st.markdown("Haben wir Ihr Interesse geweckt? Tragen Sie sich unverbindlich auf unsere Warteliste ein, um den offiziellen Start nicht zu verpassen.")
+    
+    csv_datei = "warteliste.csv"
+    
+    with st.form(key='waitlist_form', clear_on_submit=True):
+        col_name, col_email = st.columns(2)
+        with col_name:
+            kunden_name = st.text_input("Ihr Name")
+        with col_email:
+            kunden_email = st.text_input("Ihre E-Mail-Adresse")
+            
+        submit_button = st.form_submit_button(label='Jetzt exklusiven Beta-Zugang sichern ➔')
+        
+        if submit_button:
+            if kunden_name and kunden_email:
+                neuer_eintrag = pd.DataFrame([{
+                    "Datum": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "Name": kunden_name,
+                    "Email": kunden_email
+                }])
+                
+                if not os.path.isfile(csv_datei):
+                    neuer_eintrag.to_csv(csv_datei, index=False)
+                else:
+                    neuer_eintrag.to_csv(csv_datei, mode='a', header=False, index=False)
+                    
+                st.balloons()
+                st.success(f"Salam {kunden_name}! Vielen Dank für Ihr Vertrauen. Sie wurden auf der Warteliste eingetragen.")
+            else:
+                st.warning("Bitte füllen Sie sowohl den Namen als auch die E-Mail-Adresse aus.")
+
+    # ==============================================================================
+    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Hadith- & Bild-Version)
     # ==============================================================================
     st.markdown("---")
     st.markdown("<h2 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>🌱 1. Investment: Sadaqah Jariyah Projekte</h2>", unsafe_allow_html=True)
@@ -189,7 +225,6 @@ else:
     proj1, proj2, proj3 = st.columns(3)
 
     with proj1:
-        # Stabiles Bild: Brunnenbau
         st.image("https://wikimedia.org", use_container_width=True)
         st.markdown("### 💧 1. Brunnen bauen")
         st.caption("Sichern Sie Dörfern dauerhaften Zugang zu sauberem Trinkwasser.")
@@ -197,7 +232,6 @@ else:
             st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="💧")
             
     with proj2:
-        # Stabiles Bild: Waisenhäuser / Kinderhilfe
         st.image("https://wikimedia.org", use_container_width=True)
         st.markdown("### 🧒 2. Waisenhäuser")
         st.caption("Übernehmen Sie die Verantwortung für Kleidung, Nahrung und Bildung eines Kindes.")
@@ -205,7 +239,6 @@ else:
             st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🧒")
             
     with proj3:
-        # Stabiles Bild: Moschee errichten
         st.image("https://wikimedia.org", use_container_width=True)
         st.markdown("### 🕌 3. Moschee errichten")
         st.caption("Investieren Sie in den Bau von Gebetsstätten und Schulen weltweit.")

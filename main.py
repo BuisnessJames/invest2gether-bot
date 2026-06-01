@@ -81,7 +81,7 @@ else:
     st.pyplot(fig)
 
     # ==============================================================================
-    # WARTELISTE FORMULAR (Dein Wunsch-Text eingebaut)
+    # WARTELISTE FORMULAR
     # ==============================================================================
     st.markdown("---")
     st.subheader("🚀 Werden Sie Teil der Beta-Phase von invest2gether")
@@ -106,12 +106,12 @@ else:
             st.success("Erfolgreich auf der Warteliste eingetragen!")
 
     # ==============================================================================
-    # SADAQAH PROJEKTE PART (Edles Design & Schöne Schriftarten)
+    # SADAQAH PROJEKTE PART
     # ==============================================================================
     st.markdown("---")
     
     # Premium Überschrift in Georgia-Serifenschrift
-    st.markdown("<h2 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif; font-weight: 300; letter-spacing: 1px;'>🌱 1. Investition: Fortlaufende Spendenprojekte (Sadaqah Jariyah)</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif; font-weight: 300; letter-spacing: 1px;'>🌱 Investition: Fortlaufende Spendenprojekte (Sadaqah Jariyah)</h2>", unsafe_allow_html=True)
     
     # Edles Hadith-Banner
     html_sadaqah_text = """
@@ -132,7 +132,7 @@ else:
     
     with proj1:
         st.markdown("<div style='border: 1px solid #e9ecef; padding: 15px; border-radius: 8px; background-color: white;'>", unsafe_allow_html=True)
-        st.image("https://wikimedia.org", use_container_width=True)
+        st.image("https://waterwellsforafrica.org", use_container_width=True)
         st.markdown("<h3 style='text-align: center; color: #1E5631; font-family: \"Georgia\", serif;'>💧 Brunnen bauen</h3>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; font-size: 0.9em; color: #6c757d; min-height: 50px;'>Sichern Sie Dörfern und Familien dauerhaften Zugang zu sauberem Trinkwasser.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b1", use_container_width=True): 
@@ -141,18 +141,18 @@ else:
             
     with proj2:
         st.markdown("<div style='border: 1px solid #e9ecef; padding: 15px; border-radius: 8px; background-color: white;'>", unsafe_allow_html=True)
-        st.image("https://wikimedia.org", use_container_width=True)
-        st.markdown("<h3 style='text-align: center; color: #1E5631; font-family: \"Georgia\", serif;'>🧒 Waisenhäuser</h3>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center; font-size: 0.9em; color: #6c757d; min-height: 50px;'>Übernehmen Sie die Verantwortung für Nahrung, Kleidung und Bildung schutzbedürftiger Kinder.</p>", unsafe_allow_html=True)
+        st.image("https://archdaily.net", use_container_width=True)
+        st.markdown("<h3 style='text-align: center; color: #1E5631; font-family: \"Georgia\", serif;'>🏢 Waisenhäuser</h3>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center; font-size: 0.9em; color: #6c757d; min-height: 50px;'>Bau und Unterhalt von sicheren Unterkünften für Waisenkinder weltweit.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b2", use_container_width=True): 
-            st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🧒")
+            st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🏢")
         st.markdown("</div>", unsafe_allow_html=True)
-            
+
     with proj3:
         st.markdown("<div style='border: 1px solid #e9ecef; padding: 15px; border-radius: 8px; background-color: white;'>", unsafe_allow_html=True)
-        st.image("https://wikimedia.org", use_container_width=True)
+        st.image("https://architizer.com", use_container_width=True)
         st.markdown("<h3 style='text-align: center; color: #1E5631; font-family: \"Georgia\", serif;'>🕌 Moschee errichten</h3>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center; font-size: 0.9em; color: #6c757d; min-height: 50px;'>Investieren Sie nachhaltig in den Bau von Gebetsstätten und islamischen Bildungszentren.</p>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center; font-size: 0.9em; color: #6c757d; min-height: 50px;'>Unterstützung und Finanzierung von nachhaltigen Moscheebauten weltweit.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b3", use_container_width=True): 
             st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🕌")
         st.markdown("</div>", unsafe_allow_html=True)

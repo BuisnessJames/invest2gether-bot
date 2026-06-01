@@ -105,7 +105,7 @@ else:
             else:
                 wert_in_aktien = anteile_bot * kurs_aktien
                 kapital_bot = wert_in_aktien - ORDER_GEBUEHR
-                anteile_bot = kapital_bot / kurs_gold  # KORREKTUR: Doppelte Zeile & Syntax entfernt
+                anteile_bot = kapital_bot / kurs_gold  
                 position = "Gold"
             letztes_signal = aktuelles_signal
             
@@ -163,7 +163,7 @@ else:
     ax.legend(facecolor='#f0f2f6')
     st.pyplot(fig)
 
-        # ==============================================================================
+    # ==============================================================================
     # INTERAKTIVE WARTELISTE
     # ==============================================================================
     st.markdown("---")
@@ -200,12 +200,11 @@ else:
                 st.warning("Bitte füllen Sie sowohl den Namen als auch die E-Mail-Adresse aus.")
 
     # ==============================================================================
-    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Hadith- & Bild-Version)
+    # SADAQAH JARIYAH & JENSEITS-INVESTMENT
     # ==============================================================================
     st.markdown("---")
     st.markdown("<h2 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>🌱 1. Investment: Sadaqah Jariyah Projekte</h2>", unsafe_allow_html=True)
     
-    # Elegantes Banner mit dem gewählten Hadith
     html_sadaqah_text = """
     <div style='background-color: #f4f6f9; padding: 15px; border-radius: 8px; border-left: 5px solid #D4AF37; text-align: center; margin-bottom: 25px;'>
         <p style='font-family: "Georgia", serif; font-style: italic; font-size: 1.25em; color: #1E5631; margin: 0;'>
@@ -215,68 +214,3 @@ else:
             — Prophet Mohammed ﷺ (Sahih Muslim)
         </p>
     </div>
-    """
-    st.markdown(html_sadaqah_text, unsafe_allow_html=True)
-    
-    st.markdown("<p style='text-align: center; font-family: sans-serif; color: #555555;'>Wählen Sie ein reales Projekt aus, um Ihre Erträge und Reinigungssummen direkt fließen zu lassen (Demonstrations-Modus):</p>", unsafe_allow_html=True)
-    st.write("")
-
-    # 3 Spalten für die interaktive Auswahl inklusive stabiler Wiki-Bilder
-    proj1, proj2, proj3 = st.columns(3)
-
-    with proj1:
-        st.image("https://wikimedia.org", use_container_width=True)
-        st.markdown("### 💧 1. Brunnen bauen")
-        st.caption("Sichern Sie Dörfern dauerhaften Zugang zu sauberem Trinkwasser.")
-        if st.button("Projekt auswählen ➔", key="btn_brunnen"):
-            st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="💧")
-            
-    with proj2:
-        st.image("https://wikimedia.org", use_container_width=True)
-        st.markdown("### 🧒 2. Waisenhäuser")
-        st.caption("Übernehmen Sie die Verantwortung für Kleidung, Nahrung und Bildung eines Kindes.")
-        if st.button("Projekt auswählen ➔", key="btn_waisen"):
-            st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🧒")
-            
-    with proj3:
-        st.image("https://wikimedia.org", use_container_width=True)
-        st.markdown("### 🕌 3. Moschee errichten")
-        st.caption("Investieren Sie in den Bau von Gebetsstätten und Schulen weltweit.")
-        if st.button("Projekt auswählen ➔", key="btn_moschee"):
-            st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🕌")
-
-            # ==============================================================================
-    # INTERAKTIVE WARTELISTE
-    # ==============================================================================
-    st.markdown("---")
-    st.subheader("🚀 Werden Sie Teil der Beta-Phase von invest2gether")
-    st.markdown("Haben wir Ihr Interesse geweckt? Tragen Sie sich unverbindlich auf unsere Warteliste ein, um den offiziellen Start nicht zu verpassen.")
-    
-    csv_datei = "warteliste.csv"
-    
-    with st.form(key='waitlist_form', clear_on_submit=True):
-        col_name, col_email = st.columns(2)
-        with col_name:
-            kunden_name = st.text_input("Ihr Name")
-        with col_email:
-            kunden_email = st.text_input("Ihre E-Mail-Adresse")
-            
-        submit_button = st.form_submit_button(label='Jetzt exklusiven Beta-Zugang sichern ➔')
-        
-        if submit_button:
-            if kunden_name and kunden_email:
-                neuer_eintrag = pd.DataFrame([{
-                    "Datum": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    "Name": kunden_name,
-                    "Email": kunden_email
-                }])
-                
-                if not os.path.isfile(csv_datei):
-                    neuer_eintrag.to_csv(csv_datei, index=False)
-                else:
-                    neuer_eintrag.to_csv(csv_datei, mode='a', header=False, index=False)
-                    
-                st.balloons()
-                st.success(f"Salam {kunden_name}! Vielen Dank für Ihr Vertrauen. Sie wurden auf der Warteliste eingetragen.")
-            else:
-                st.warning("Bitte füllen Sie sowohl den Namen als auch die E-Mail-Adresse aus.")

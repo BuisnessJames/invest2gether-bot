@@ -201,6 +201,7 @@ else:
     # ==============================================================================
     # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Jetzt sauber eingerückt!)
     # ==============================================================================
+    
     st.markdown("---")
     st.markdown("<h2 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>🌱 1. Investment: Sadaqah Jariyah Projekte</h2>", unsafe_allow_html=True)
     

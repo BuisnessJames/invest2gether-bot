@@ -215,4 +215,3 @@ else:
     </div>
     """
     st.markdown(html_sadaqah_text, unsafe_allow_html=True)
-    

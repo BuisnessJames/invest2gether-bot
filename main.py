@@ -151,7 +151,7 @@ else:
     with proj3:
         st.markdown("<div style='border: 1px solid #e9ecef; padding: 15px; border-radius: 8px; background-color: white;'>", unsafe_allow_html=True)
         st.image("https://wikimedia.org", use_container_width=True)
-        st.markdown("<h3 style='text-align: center; color: #1E5631; font-family: \"Georgia\", serif;'> mosque_icon 🕌 Moschee errichten</h3>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; color: #1E5631; font-family: \"Georgia\", serif;'>🕌 Moschee errichten</h3>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; font-size: 0.9em; color: #6c757d; min-height: 50px;'>Investieren Sie nachhaltig in den Bau von Gebetsstätten und islamischen Bildungszentren.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b3", use_container_width=True): 
             st.toast("🎯 Projekt ausgewählt! In der Live-Version wird Ihre Spende hier verbucht.", icon="🕌")

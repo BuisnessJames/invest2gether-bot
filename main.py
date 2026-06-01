@@ -134,14 +134,14 @@ else:
             st.toast("🎯 Projekt ausgewählt!", icon="💧")
             
     with proj2:
-        st.markdown("<h1 style='text-align: center; font-size: 80px; margin: 0;'>👶</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; font-size: 80px; margin: 0;'>🏡</h1>", unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>👶 Waisenhäuser</h3>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; font-size: 0.95em; color: #888888; min-height: 50px;'>Bau und Unterhalt von sicheren Unterkünften für Waisenkinder weltweit.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b2", use_container_width=True): 
             st.toast("🎯 Projekt ausgewählt!", icon="🏢")
 
     with proj3:
-        st.markdown("<h1 style='text-align: center; font-size: 80px; margin: 0;'>🕌</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; font-size: 80px; margin: 0;'>🕋</h1>", unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>🕌 Moschee errichten</h3>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; font-size: 0.95em; color: #888888; min-height: 50px;'>Unterstützung und Finanzierung von nachhaltigen Moscheebauten weltweit.</p>", unsafe_allow_html=True)
         if st.button("Projekt auswählen ➔", key="btn_b3", use_container_width=True): 

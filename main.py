@@ -73,7 +73,6 @@ else:
     verlauf_bh = []
     eingezahltes_kapital = START_KAPITAL
     
-    # KORREKTUR: Einzelnen Startmonat auslesen, um ValueError zu verhindern
     letzter_monat = df.index[0].month
 
     for i in range(len(df)):
@@ -200,7 +199,7 @@ else:
                 st.warning("Bitte füllen Sie sowohl den Namen als auch die E-Mail-Adresse aus.")
 
     # ==============================================================================
-    # SADAQAH JARIYAH & JENSEITS-INVESTMENT
+    # SADAQAH JARIYAH & JENSEITS-INVESTMENT (Jetzt sauber eingerückt!)
     # ==============================================================================
     st.markdown("---")
     st.markdown("<h2 style='text-align: center; color: #D4AF37; font-family: \"Georgia\", serif;'>🌱 1. Investment: Sadaqah Jariyah Projekte</h2>", unsafe_allow_html=True)
@@ -214,3 +213,4 @@ else:
             — Prophet Mohammed ﷺ (Sahih Muslim)
         </p>
     </div>
+    """
